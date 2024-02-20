@@ -6,28 +6,47 @@
   },
   "package": {
     "productName": "CampoTV Plus",
-    "version": "0.0.0"
+    "version": "1.0.0"
   },
   "tauri": {
     "allowlist": {
-      "all": false,
+      "all": false, 
       "shell": {
         "all": false,
         "open": true
+      },
+      "window": {
+        "all": false,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true,
+        "startDragging": true
       }
     },
     "windows": [
       {
+        "fullscreen": false,      
+        "resizable": true,
         "title": "CampoTV Plus",
-        "fullscreen": true,
-        "alwaysOnTop": false,
         "width": 1024,
-        "height": 768,
-        "url": "https://www.campotvplus.com.br/"
+        "height": 600, 
+        "minWidth": 1024,
+        "minHeight": 600,
+        "center": true,
+        "alwaysOnTop": true,
+        "transparent": true,
+        "hiddenTitle": true,
+        "decorations": true,
+        "url": "https://campotvplus.com.br/"
       }
     ],
-    "security": {
-      "csp": null
+    "systemTray": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true
     },
     "bundle": {
       "active": true,
@@ -36,9 +55,23 @@
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
         "icons/icon.ico"
+      ],
+      "windows": {
+        "wix": {
+          "language": ["pt-BR"]
+        }
+      }
+    },
+    "security": {
+      "csp": null,
+      "dangerousRemoteDomainIpcAccess": [
+        {
+          "windows": ["main", "settings"],
+          "domain": "https://campotvplus.com.br/",
+          "plugins": ["trusted-plugin"],
+          "enableTauriAPI": false
+        }
       ]
     }
   }
