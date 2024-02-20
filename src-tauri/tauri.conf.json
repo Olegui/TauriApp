@@ -29,7 +29,7 @@
     },
     "windows": [
       {
-        "fullscreen": false,      
+        "fullscreen": true,      
         "resizable": true,
         "title": "CampoTV Plus",
         "width": 1024,
