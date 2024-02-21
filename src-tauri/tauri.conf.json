@@ -29,18 +29,12 @@
     },
     "windows": [
       {
-        "fullscreen": true,      
-        "resizable": true,
+        "fullscreen": true,
         "title": "CampoTV Plus",
-        "width": 1024,
-        "height": 600, 
-        "minWidth": 1024,
-        "minHeight": 600,
         "center": true,
         "alwaysOnTop": true,
-        "transparent": true,
         "hiddenTitle": true,
-        "decorations": true,
+        "decorations": false,
         "url": "https://campotvplus.com.br/"
       }
     ],
